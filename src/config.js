@@ -1,4 +1,4 @@
-export const AHREFS_API_TOKEN = '6ef5d9603e4df787b7999b28e3a8337db8d82307fe5874c275570086398b8640';
+export const AHREFS_API_TOKEN = 'c7jA1CTE81hXnDpo18GgYtYKm7vifPAvarISMMhI';
 export const AHREFS_BASE_URL = 'https://api.ahrefs.com/v3';
 
 export const SOCIAL_PLATFORMS = [
