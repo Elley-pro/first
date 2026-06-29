@@ -1,0 +1,14 @@
+{
+  "name": "company-profile-framework",
+  "version": "1.0.0",
+  "description": "Automated company intelligence profiler covering traffic, channels, social presence, and ad strategy",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "profile": "node src/index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
