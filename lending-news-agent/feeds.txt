@@ -1,0 +1,59 @@
+# Consumer-lending news agent — monitored RSS feeds
+# One URL per line. Lines starting with # are comments.
+# Every URL below was fetched and verified to parse on 2026-08-20.
+
+# ── Core US financial press ─────────────────────────────────────────────
+# Wall Street Journal — Markets
+https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+# Wall Street Journal — US Business
+https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness
+# CNBC — Finance (the classic /id/ feed URL blocks bots; this one works)
+https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664
+# MarketWatch — Top Stories
+https://feeds.content.dowjones.io/public/rss/mw_topstories
+# Yahoo Finance — News
+https://finance.yahoo.com/news/rssindex
+# Reuters (no public RSS since 2020 — covered via Google News query)
+https://news.google.com/rss/search?q=site:reuters.com%20(%22consumer%20lending%22%20OR%20%22credit%20card%22%20OR%20%22debt%20collection%22%20OR%20delinquencies)&hl=en-US&gl=US&ceid=US:en
+# Bloomberg (paywalled, no public RSS — covered via Google News query)
+https://news.google.com/rss/search?q=site:bloomberg.com%20(%22consumer%20credit%22%20OR%20%22consumer%20lending%22%20OR%20delinquencies%20OR%20%22debt%20collection%22)&hl=en-US&gl=US&ceid=US:en
+
+# ── Industry trade press ────────────────────────────────────────────────
+# American Banker
+https://www.americanbanker.com/feed?rss=true
+# insideARM (native RSS is bot-blocked — covered via Google News query)
+https://news.google.com/rss/search?q=site:insidearm.com%20OR%20(%22debt%20collection%22%20industry)&hl=en-US&gl=US&ceid=US:en
+# PYMNTS
+https://www.pymnts.com/feed/
+# Auto Finance News (native RSS behind Cloudflare — covered via Google News)
+https://news.google.com/rss/search?q=site:autofinancenews.net%20OR%20(%22auto%20loan%22%20delinquencies)&hl=en-US&gl=US&ceid=US:en
+# National Mortgage News
+https://www.nationalmortgagenews.com/feed?rss=true
+# Consumer Finance Monitor (Ballard Spahr regulatory law blog)
+https://www.consumerfinancemonitor.com/feed/
+
+# ── Regulators (primary sources) ────────────────────────────────────────
+# CFPB Newsroom
+https://www.consumerfinance.gov/about-us/newsroom/feed/
+# Federal Reserve — all press releases
+https://www.federalreserve.gov/feeds/press_all.xml
+# FDIC — news
+https://www.fdic.gov/rss.xml
+# OCC — news releases
+https://www.occ.gov/rss/occ_news.xml
+# FTC — press releases
+https://www.ftc.gov/feeds/press-release.xml
+
+# ── Google News query feeds — "all impactful names" coverage ────────────
+# Major lenders
+https://news.google.com/rss/search?q=(%22Capital%20One%22%20OR%20Synchrony%20OR%20Discover%20OR%20%22Ally%20Financial%22)%20(lending%20OR%20credit%20OR%20loans)&hl=en-US&gl=US&ceid=US:en
+# Fintech lenders
+https://news.google.com/rss/search?q=(SoFi%20OR%20Affirm%20OR%20Upstart%20OR%20%22OneMain%22)%20(lending%20OR%20credit%20OR%20loans)&hl=en-US&gl=US&ceid=US:en
+# Collections & debt buying
+https://news.google.com/rss/search?q=%22PRA%20Group%22%20OR%20%22Encore%20Capital%22%20OR%20%22debt%20collection%22%20OR%20%22debt%20buyer%22&hl=en-US&gl=US&ceid=US:en
+# Funds active in consumer credit
+https://news.google.com/rss/search?q=(Apollo%20OR%20Blackstone%20OR%20KKR%20OR%20Ares)%20(%22consumer%20lending%22%20OR%20%22private%20credit%22%20OR%20%22loan%20portfolio%22)&hl=en-US&gl=US&ceid=US:en
+# Macro credit health
+https://news.google.com/rss/search?q=%22credit%20card%20delinquencies%22%20OR%20%22auto%20loan%20delinquencies%22%20OR%20%22charge-offs%22&hl=en-US&gl=US&ceid=US:en
+# CFPB / FDCPA regulatory chatter beyond official releases
+https://news.google.com/rss/search?q=(CFPB%20OR%20FDCPA%20OR%20%22Reg%20F%22)%20(lending%20OR%20collection%20OR%20enforcement)&hl=en-US&gl=US&ceid=US:en

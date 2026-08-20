@@ -1,0 +1,30 @@
+name: Consumer-lending news brief
+
+on:
+  schedule:
+    # 12:00 UTC ≈ 8:00 New York (EDT). GitHub cron is always UTC and does
+    # not adjust for daylight saving.
+    - cron: "0 12 * * 1"  # Mondays  — 96h window since Thursday's brief
+    - cron: "0 12 * * 4"  # Thursdays — 72h window since Monday's brief
+  workflow_dispatch: {}
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r lending-news-agent/requirements.txt
+
+      - name: Run news agent
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python lending-news-agent/news_agent.py
