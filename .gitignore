@@ -2,3 +2,8 @@ node_modules/
 
 __pycache__/
 *.pyc
+
+# openmart pipeline working state
+openmart-cu-leads/__pycache__/
+openmart-cu-leads/*.log
+openmart-cu-leads/brands_cursor.txt
