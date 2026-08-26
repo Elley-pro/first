@@ -7,3 +7,7 @@ __pycache__/
 openmart-cu-leads/__pycache__/
 openmart-cu-leads/*.log
 openmart-cu-leads/brands_cursor.txt
+# contact data — personal emails/LinkedIn profiles, never commit to a public repo
+openmart-cu-leads/*.csv
+openmart-cu-leads/*.jsonl
+openmart-cu-leads/domains_done.txt
