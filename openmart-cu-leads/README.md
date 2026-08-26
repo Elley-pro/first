@@ -4,6 +4,24 @@ Pipeline that builds a deduplicated list of decision makers responsible for loan
 portfolio sales and portfolio management at US credit unions, using the
 [Openmart API](https://app.openmart.com/api-docs).
 
+## Run of 2026-08-26
+
+| Metric | Value |
+|--------|-------|
+| Credit unions searched | 1,847 unique US credit union domains |
+| Credit unions enriched | 1,792 |
+| Raw contacts returned | 1,814 |
+| Duplicates removed | 147 |
+| Rows without email or LinkedIn dropped | 550 |
+| **Final rows** | **1,117 contacts at 820 credit unions** |
+| With email | 827 (807 Openmart-verified) |
+| With personal LinkedIn | 842 |
+| With both | 552 |
+| Credits used | 4,334 → 18 |
+
+Title mix: 660 C-level/president (CFO, Chief Lending Officer, Chief Credit
+Officer), 414 lending / collections / recovery management, 43 other.
+
 ## Output
 
 `credit_union_portfolio_decision_makers.csv`

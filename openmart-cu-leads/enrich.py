@@ -47,7 +47,9 @@ def run_batch(chunk):
         log("submit failed: %s" % e)
         return 0
     bid = sub["batch_id"]
-    log("submitted %s n=%d" % (bid[:8], len(tasks)))
+    with lock:
+        open(os.path.join(HERE, "batch_ids.txt"), "a").write(bid + "\n")
+    log("submitted %s n=%d" % (bid, len(tasks)))
 
     deadline = time.time() + POLL_LIMIT
     st = {}
@@ -85,7 +87,7 @@ def run_batch(chunk):
         with open(DONE, "a") as df:
             for b in chunk:
                 df.write(b["domain"] + "\n")
-    log("batch %s done people=%d status=%s" % (bid[:8], got, json.dumps(st)))
+    log("batch %s done people=%d status=%s" % (bid, got, json.dumps(st)))
     return got
 
 
